@@ -27,6 +27,7 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 		"Three AIs, Three Laws",
 		"From Text-to-Video to Intent-to-Video",
 		"Wake-Up Call Software Engineers Needed",
+		"Broken Promise Worth $134 Billion",
 	} {
 		if !strings.Contains(body, want) {
 			t.Fatalf("response missing %q", want)
@@ -72,8 +73,8 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 3 {
-		t.Fatalf("len(posts) = %d, want 3", len(posts))
+	if len(posts) != 4 {
+		t.Fatalf("len(posts) = %d, want 4", len(posts))
 	}
 
 	if got := posts[0]["slug"]; got == "" {

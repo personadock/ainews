@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 3 {
-		t.Fatalf("Posts() returned %d posts, want 3", len(got))
+	if len(got) != 4 {
+		t.Fatalf("Posts() returned %d posts, want 4", len(got))
 	}
 
 	for _, post := range got {
@@ -15,8 +15,8 @@ func TestPostsReturnsPublishedPosts(t *testing.T) {
 		if post.Slug == "" {
 			t.Fatal("Posts() returned a post with an empty slug")
 		}
-		if post.Date != "May 8, 2026" {
-			t.Fatalf("post %q has date %q, want May 8, 2026", post.Slug, post.Date)
+		if post.Date == "" {
+			t.Fatalf("post %q has an empty date", post.Slug)
 		}
 		if len(post.Sections) == 0 {
 			t.Fatalf("post %q has no sections", post.Slug)
@@ -32,6 +32,14 @@ func TestFindBySlug(t *testing.T) {
 
 	if post.Title != "Google's 75% Stat is the Wake-Up Call Software Engineers Needed" {
 		t.Fatalf("FindBySlug() returned %q", post.Title)
+	}
+
+	governancePost, ok := FindBySlug("broken-promise-worth-134-billion-openai-trial-ai-governance-under-oath")
+	if !ok {
+		t.Fatal("FindBySlug() did not find governance post")
+	}
+	if governancePost.Title != "A Broken Promise Worth $134 Billion: The OpenAI Trial Putting AI Governance Under Oath" {
+		t.Fatalf("FindBySlug() returned %q for governance post", governancePost.Title)
 	}
 
 	if _, ok := FindBySlug("missing-post"); ok {

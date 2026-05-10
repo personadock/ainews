@@ -132,6 +132,48 @@ var posts = []Post{
 			},
 		},
 	},
+	{
+		Title:     "A Broken Promise Worth $134 Billion: The OpenAI Trial Putting AI Governance Under Oath",
+		Slug:      "broken-promise-worth-134-billion-openai-trial-ai-governance-under-oath",
+		Date:      "May 6, 2026",
+		Tag:       "Governance",
+		Summary:   "The Musk v. Altman case is exposing the most detailed public record yet of how OpenAI's nonprofit mission, commercial structure, and power politics collided under oath.",
+		SourceDoc: "https://docs.google.com/document/d/1h4FGSY_qMo8ISTh44AmaH5upQs4pzo67WUb-GBdLrh0/edit",
+		Sections: []Section{
+			{
+				Paragraphs: []string{
+					"The most important thing about the Musk v. Altman trial is not who wins. Courts are skeptical institutions and $134 billion judgments are rare. What matters is what the trial is producing: the most detailed public record of how the world's most influential AI lab was actually built, governed, and eventually transformed from a nonprofit into a $157 billion commercial entity.",
+					"That record is being made under oath, in a federal court in Oakland, California, and it is not flattering to anyone involved.",
+				},
+			},
+			{
+				Heading: "The Case in Brief",
+				Paragraphs: []string{
+					"Elon Musk sued OpenAI, Sam Altman, and Greg Brockman in 2024, claiming that OpenAI broke its founding promise to remain a nonprofit developing AI for the benefit of humanity. Musk contributed approximately $38 million to OpenAI in its early years and argues those funds were solicited under specific commitments about the organization's mission and structure.",
+					"The relief sought is extraordinary: up to $134 billion in damages, the removal of Altman and Brockman from their positions, and the unwinding of OpenAI's conversion to a Public Benefit Corporation, completed on October 28, 2025 with regulatory approval from the attorneys general of California and Delaware.",
+					"Under the new structure, the OpenAI Foundation holds 26%, Microsoft holds 27%, and employees and investors hold the remaining 47%. Sam Altman reportedly took no equity in the restructuring.",
+				},
+			},
+			{
+				Heading: "The Bombshells From the Stand",
+				Paragraphs: []string{
+					"Musk testified for three days in week one. He said he was duped. He warned the court that AI could kill humanity. And then he admitted under oath that xAI, his own AI company, distills models from OpenAI's outputs, training Grok on the very outputs of the system he is suing to stop.",
+					"Musk also texted Greg Brockman to explore settlement two days before the trial began. OpenAI rejected it. That overture suggests Musk's legal team had genuine doubts about their position, which aligned with prediction market pricing on May 5 that implied roughly a 22% chance of a Musk win.",
+					"In week two, Brockman flatly disputed Musk's version of OpenAI's founding. He testified that he had made no commitments to Musk about corporate structure and heard no one else do so. He also said Musk secretly redirected several OpenAI employees in 2017 to spend months overhauling Tesla's Autopilot program without OpenAI's knowledge or compensation.",
+				},
+			},
+			{
+				Heading: "What This Trial Is Actually Deciding",
+				Paragraphs: []string{
+					"Beyond Musk's personal claims, the trial is testing whether the founding mission of a nonprofit AI organization creates legally enforceable constraints on how that organization commercializes its work.",
+					"If a court rules that OpenAI made binding legal commitments that the Public Benefit Corporation restructuring violated, the implications extend far beyond this case. Dozens of AI and technology organizations have hybrid nonprofit-commercial structures, and every one of them would face similar scrutiny.",
+					"The Microsoft dimension adds another layer. Microsoft holds 27% of OpenAI's commercial entity and has tied Copilot, Azure AI, and its broader product stack to that relationship. Any ruling that forced a restructuring would reverberate through one of the world's most valuable companies, not just OpenAI.",
+					"Shivon Zilis was identified in the draft as the next witness. Because she served on OpenAI's nonprofit board from 2019 to 2023, her testimony could either corroborate or contradict Musk's account with board-level knowledge of the conversion path.",
+					"However the ruling lands, the trial has already succeeded in elevating the question of who should control AI from philosophy to legal precedent. The founding tensions between safety mission and commercial reality are now documented in a public court record that the industry will keep citing long after the damages question is resolved.",
+				},
+			},
+		},
+	},
 }
 
 // Posts returns all published posts in publication order.
