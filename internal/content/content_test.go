@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 4 {
-		t.Fatalf("Posts() returned %d posts, want 4", len(got))
+	if len(got) != 6 {
+		t.Fatalf("Posts() returned %d posts, want 6", len(got))
 	}
 
 	for _, post := range got {
@@ -25,13 +25,29 @@ func TestPostsReturnsPublishedPosts(t *testing.T) {
 }
 
 func TestFindBySlug(t *testing.T) {
-	post, ok := FindBySlug("googles-75-percent-stat-wake-up-call-software-engineers-needed")
+	post, ok := FindBySlug("sprint-is-real-inside-xai-grok-4-race-to-the-top")
+	if !ok {
+		t.Fatal("FindBySlug() did not find Grok sprint post")
+	}
+	if post.Title != "The Sprint Is Real: Inside xAI's Grok 4 Race to the Top" {
+		t.Fatalf("FindBySlug() returned %q for Grok sprint post", post.Title)
+	}
+
+	policyPost, ok := FindBySlug("caisi-reversal-what-washingtons-sudden-policy-pivot-means-for-ai-development")
+	if !ok {
+		t.Fatal("FindBySlug() did not find CAISI reversal post")
+	}
+	if policyPost.Title != "The CAISI Reversal: What Washington's Sudden Policy Pivot Means for AI Development" {
+		t.Fatalf("FindBySlug() returned %q for CAISI reversal post", policyPost.Title)
+	}
+
+	engineeringPost, ok := FindBySlug("googles-75-percent-stat-wake-up-call-software-engineers-needed")
 	if !ok {
 		t.Fatal("FindBySlug() did not find expected post")
 	}
 
-	if post.Title != "Google's 75% Stat is the Wake-Up Call Software Engineers Needed" {
-		t.Fatalf("FindBySlug() returned %q", post.Title)
+	if engineeringPost.Title != "Google's 75% Stat is the Wake-Up Call Software Engineers Needed" {
+		t.Fatalf("FindBySlug() returned %q", engineeringPost.Title)
 	}
 
 	governancePost, ok := FindBySlug("broken-promise-worth-134-billion-openai-trial-ai-governance-under-oath")

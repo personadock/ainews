@@ -19,6 +19,101 @@ type Post struct {
 
 var posts = []Post{
 	{
+		Title:     "The Sprint Is Real: Inside xAI's Grok 4 Race to the Top",
+		Slug:      "sprint-is-real-inside-xai-grok-4-race-to-the-top",
+		Date:      "May 10, 2026",
+		Tag:       "Models",
+		Summary:   "xAI's Colossus cluster, X data advantage, and sub-version release tempo are turning Grok 4 into a case study in how the frontier model race has compressed into continuous iteration.",
+		SourceDoc: "https://docs.google.com/document/d/1Cg_DKrFkk4eDHtiV0aMIYdOOnr7p-3csicbxgYDo2ow/edit",
+		Sections: []Section{
+			{
+				Paragraphs: []string{
+					"When Elon Musk founded xAI in the summer of 2023, skeptics had a straightforward critique: he was late to the frontier AI race, lacked a proprietary data moat, and was already stretched across several companies. Grok 1 did little to quiet that skepticism.",
+					"Eighteen months later, that picture looks very different. Grok 4 made xAI a genuine top-tier contender, and the expected arrival of Grok 4.4 suggests the company is operating on a model improvement loop that is unusually fast even by current industry standards.",
+				},
+			},
+			{
+				Heading: "The Colossus Advantage",
+				Paragraphs: []string{
+					"xAI's acceleration starts with compute. Its Colossus cluster in Memphis began with 100,000 NVIDIA H100 GPUs and has expanded since, giving the company one of the largest dedicated AI training systems in the world.",
+					"That matters because frontier progress depends not just on a single long training run, but on the ability to test architectures, tune hyperparameters, and pursue multiple experiments in parallel. A cluster built primarily for training gives xAI more freedom to iterate than competitors balancing internal compute across many product workloads.",
+				},
+			},
+			{
+				Heading: "What Grok 4 Got Right",
+				Paragraphs: []string{
+					"On release, Grok 4 posted competitive results against GPT-5.5 and Claude Sonnet 4.6 on reasoning tasks, while standing out more clearly on coding and long-context retrieval. Users also described it as more direct and less heavily hedged than rival systems.",
+					"That style has made Grok 4 more distinctive, but also more controversial. Safety researchers continue to question its refusal behavior in sensitive domains, while xAI argues that over-cautious systems can themselves withhold useful information. Separate from that debate, Grok's integration into X gives it a real-time social data stream that no direct rival currently matches at comparable scale.",
+				},
+			},
+			{
+				Heading: "The 4.4 Sprint and What It Signals",
+				Paragraphs: []string{
+					"The bigger story is cadence. Instead of treating each release as a rare marquee event, xAI has moved through Grok 4.1, 4.2, 4.3, and now an anticipated 4.4, with each update targeting a narrower capability cluster such as long-context reasoning, multimodal analysis, or tool use.",
+					"That shift turns frontier model development into something closer to continuous delivery. Reports around Grok 4.4 point to stronger multi-step reasoning and math performance, suggesting xAI is trying to close the remaining gaps by shipping improvements as soon as they are production-ready rather than waiting for the next large brand reset.",
+				},
+			},
+			{
+				Heading: "The Race Nobody Can Afford to Lose",
+				Paragraphs: []string{
+					"xAI's pace reflects a broader industry reality: any capability lead now decays quickly. GPT-5.5 Instant, Claude Sonnet 4.6, Gemini 3.1 Ultra, and the Grok 4 line are all arriving on timelines that make durable technical dominance difficult to hold.",
+					"For users, that compression mostly means faster improvement. For the industry, it raises a harder operational question about whether safety review can keep pace with sub-monthly releases, especially when those systems are embedded into large public platforms and exposed to hundreds of millions of people in live contexts.",
+				},
+			},
+		},
+	},
+	{
+		Title:     "The CAISI Reversal: What Washington's Sudden Policy Pivot Means for AI Development",
+		Slug:      "caisi-reversal-what-washingtons-sudden-policy-pivot-means-for-ai-development",
+		Date:      "May 10, 2026",
+		Tag:       "Policy",
+		Summary:   "The White House's withdrawal of the CAISI framework removes the closest thing the US had to a moderate federal AI safety regime and leaves developers facing a widening gap between domestic permissiveness and European enforcement.",
+		SourceDoc: "https://docs.google.com/document/d/10fv_JeJowwPbo9fhUBit3s2_qFcR17QM9ExCjmG56oY/edit",
+		Sections: []Section{
+			{
+				Paragraphs: []string{
+					"The White House's decision to withdraw support for the Comprehensive AI Safety and Innovation Standards framework, or CAISI, landed as a sharp reversal only weeks after it had seemed like the most viable bipartisan federal AI governance effort in the United States.",
+					"The administration framed the move as a competitiveness decision, arguing that mandatory pre-deployment evaluations would slow American labs. The immediate result, though, is a policy vacuum at the federal level just as frontier systems are moving into broader commercial and agentic use.",
+				},
+			},
+			{
+				Heading: "What CAISI Was",
+				Paragraphs: []string{
+					"CAISI was built over two years with participation from NIST, DARPA, the FTC, and a wider civil society coalition. It was meant to create a national baseline above the growing patchwork of state-level AI rules.",
+					"Its main pillars were mandatory capability evaluations for frontier models above a compute threshold, incident reporting within 72 hours for serious failures or misuse, and a voluntary certification label that companies could use to signal compliance to customers and procurement teams. By design, it was milder than the EU AI Act and left significant room for open-source development.",
+				},
+			},
+			{
+				Heading: "What Happened",
+				Paragraphs: []string{
+					"The immediate trigger was an April OSTP report claiming CAISI evaluations could delay qualifying model releases by four to twelve months. Critics quickly noted that the estimate relied heavily on industry-provided numbers and clashed with shorter internal modeling attributed to NIST.",
+					"The political case against CAISI was straightforward: major labs argued that Chinese competitors do not face equivalent friction, so imposing mandatory pre-deployment checks in the US would create a structural disadvantage. That argument ultimately carried more weight in Washington than the case for moderate early oversight.",
+				},
+			},
+			{
+				Heading: "What Safety Researchers Are Saying",
+				Paragraphs: []string{
+					"Researchers who helped shape the framework argue that CAISI was intentionally designed to be lightweight enough to preserve development speed while still giving regulators visibility into serious failures. Their concern is that voluntary disclosure leaves the public and the government dependent on company judgment about what to reveal and when.",
+					"That concern is amplified by recent incidents in agentic and coding systems that reportedly went unreported to federal agencies for extended periods. Under CAISI, those events would likely have triggered mandatory disclosure on a fixed timeline rather than informal, selective reporting.",
+				},
+			},
+			{
+				Heading: "The Regulatory Vacuum and the EU Divergence",
+				Paragraphs: []string{
+					"The reversal also widens the operational gap between the US and Europe. The EU AI Act is already enforceable for high-risk uses, which means American companies selling into Europe still have to meet binding obligations abroad even as comparable federal rules disappear at home.",
+					"That asymmetry may prove more expensive than its advocates expect. Avoiding a domestic framework does not remove compliance work for global companies; it just forces them to operate across more divergent legal regimes while hoping no major incident triggers a far harsher response later.",
+				},
+			},
+			{
+				Heading: "What Comes Next",
+				Paragraphs: []string{
+					"The White House did not eliminate AI governance entirely. It preserved the voluntary certification track and called for a new NIST working group to pursue so-called innovation-compatible standards by late 2027.",
+					"That timeline is long relative to frontier model progress. If the current pace holds, the US will reach several more generations of more capable agentic systems before a new federal baseline is even proposed, increasing the odds that future regulation arrives only after a public failure makes a slower, more deliberate path impossible.",
+				},
+			},
+		},
+	},
+	{
 		Title:     "Three AIs, Three Laws: Why the US, EU, and China Can't Agree on What to Do About AI",
 		Slug:      "three-ais-three-laws-us-eu-china-ai-governance",
 		Date:      "May 8, 2026",
