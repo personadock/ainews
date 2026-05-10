@@ -1,0 +1,111 @@
+{{define "post"}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.Title}}</title>
+  <style>
+    :root {
+      --paper: #f4efe7;
+      --ink: #132228;
+      --accent: #bb4d00;
+      --muted: #5e6a6e;
+      --line: rgba(19, 34, 40, 0.12);
+      --card: rgba(255, 255, 255, 0.78);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(187, 77, 0, 0.12), transparent 30%),
+        linear-gradient(180deg, #efe6d9 0%, var(--paper) 38%, #e8efe9 100%);
+    }
+    a { color: inherit; }
+    .wrap {
+      width: min(860px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+    .back {
+      font: 600 0.88rem/1.2 Arial, Helvetica, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    article {
+      margin-top: 1.5rem;
+      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(19, 34, 40, 0.08);
+    }
+    .meta {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font: 600 0.84rem/1.2 Arial, Helvetica, sans-serif;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .tag {
+      color: var(--accent);
+    }
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.5rem, 6vw, 4.6rem);
+      line-height: 0.96;
+    }
+    .summary {
+      margin: 0 0 1.5rem;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    h2 {
+      margin: 2rem 0 0.8rem;
+      font-size: 1.5rem;
+      line-height: 1.15;
+    }
+    p {
+      margin: 0 0 1rem;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+    .source {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font: 0.94rem/1.5 Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">Back to front page</a>
+    <article>
+      <div class="meta">
+        <span class="tag">{{.Post.Tag}}</span>
+        <span>{{.Post.Date}}</span>
+      </div>
+      <h1>{{.Post.Title}}</h1>
+      <p class="summary">{{.Post.Summary}}</p>
+      {{range .Post.Sections}}
+      <section>
+        {{if .Heading}}<h2>{{.Heading}}</h2>{{end}}
+        {{range .Paragraphs}}<p>{{.}}</p>{{end}}
+      </section>
+      {{end}}
+      <p class="source">Source draft: <a href="{{.Post.SourceDoc}}">{{.Post.SourceDoc}}</a></p>
+    </article>
+  </div>
+</body>
+</html>
+{{end}}
