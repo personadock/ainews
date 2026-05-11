@@ -13,7 +13,6 @@ type Post struct {
 	Date      string
 	Tag       string
 	Summary   string
-	SourceDoc string
 	Sections  []Section
 }
 
@@ -24,7 +23,6 @@ var posts = []Post{
 		Date:      "May 10, 2026",
 		Tag:       "Science",
 		Summary:   "Autonomous AI research systems are beginning to generate hypotheses, run experiments, and iterate on results across cancer detection and drug discovery, shifting scientific bottlenecks from labor to verification.",
-		SourceDoc: "https://docs.google.com/document/d/1OgmpIhsmO_fMg5BPmQoRxtmdR4QM4fF2BmvZnQsqf2M/edit",
 		Sections: []Section{
 			{
 				Paragraphs: []string{
@@ -85,7 +83,6 @@ var posts = []Post{
 		Date:      "May 10, 2026",
 		Tag:       "Hardware",
 		Summary:   "China's domestic AI chip makers are focusing on low-power robotics and edge inference hardware, turning export controls into an accelerant for localized industrial AI supply chains.",
-		SourceDoc: "https://docs.google.com/document/d/1j2iO0C-6cEyGoKeQs-s8K0xoojeD3C1-tPc6ZEp4DVM/edit",
 		Sections: []Section{
 			{
 				Paragraphs: []string{
@@ -145,7 +142,6 @@ var posts = []Post{
 		Date:      "May 10, 2026",
 		Tag:       "Platforms",
 		Summary:   "Apple's new Intelligent Services Layer turns Siri into a routing system across Apple, OpenAI, and Anthropic models, setting up a direct architectural contrast with Google's Gemini-first Android strategy.",
-		SourceDoc: "https://docs.google.com/document/d/1dEJOQa4GewWrSH8N6sCUEnMkJZWwiy2kOlHw3VcjaGw/edit",
 		Sections: []Section{
 			{
 				Paragraphs: []string{
@@ -196,7 +192,6 @@ var posts = []Post{
 		Date:      "May 10, 2026",
 		Tag:       "Models",
 		Summary:   "xAI's Colossus cluster, X data advantage, and sub-version release tempo are turning Grok 4 into a case study in how the frontier model race has compressed into continuous iteration.",
-		SourceDoc: "https://docs.google.com/document/d/1Cg_DKrFkk4eDHtiV0aMIYdOOnr7p-3csicbxgYDo2ow/edit",
 		Sections: []Section{
 			{
 				Paragraphs: []string{
@@ -240,7 +235,6 @@ var posts = []Post{
 		Date:      "May 10, 2026",
 		Tag:       "Policy",
 		Summary:   "The White House's withdrawal of the CAISI framework removes the closest thing the US had to a moderate federal AI safety regime and leaves developers facing a widening gap between domestic permissiveness and European enforcement.",
-		SourceDoc: "https://docs.google.com/document/d/10fv_JeJowwPbo9fhUBit3s2_qFcR17QM9ExCjmG56oY/edit",
 		Sections: []Section{
 			{
 				Paragraphs: []string{
@@ -291,7 +285,6 @@ var posts = []Post{
 		Date:      "May 8, 2026",
 		Tag:       "Policy",
 		Summary:   "The EU is enforcing compliance-first rules, the US is pushing federal preemption in the name of innovation, and China is binding AI policy directly to state control, leaving global builders with three incompatible operating environments.",
-		SourceDoc: "https://docs.google.com/document/d/1P5XdnlyFy6EiGAl-Q6899hnvQj1kKAV3nhf9sABQbzg/edit",
 		Sections: []Section{
 			{
 				Heading: "The Compliance Framework in Europe",
@@ -329,7 +322,6 @@ var posts = []Post{
 		Date:      "May 8, 2026",
 		Tag:       "Media",
 		Summary:   "The newest video models are moving beyond clip generation toward systems that understand pacing, continuity, sound, and narrative purpose, turning prompt boxes into early-stage directing tools.",
-		SourceDoc: "https://docs.google.com/document/d/1nXzDuufjjF9om2ATFOtnTzRpoRkgu8J0fzhqKv4ceEM/edit",
 		Sections: []Section{
 			{
 				Heading: "Seedance 2.0 and the Multimodal Turn",
@@ -367,7 +359,6 @@ var posts = []Post{
 		Date:      "May 8, 2026",
 		Tag:       "Engineering",
 		Summary:   "Google's claim that AI is generating more than 75% of some new code paths is less a flex than a signal that engineering value is shifting toward design, review, testing, and operational judgment.",
-		SourceDoc: "https://docs.google.com/document/d/18CSkDTDZreSOkPc45uBKHlq4M34tXai54-kWxlVplDE/edit",
 		Sections: []Section{
 			{
 				Heading: "The Number Matters Because of Who Said It",
@@ -405,7 +396,6 @@ var posts = []Post{
 		Date:      "May 6, 2026",
 		Tag:       "Governance",
 		Summary:   "The Musk v. Altman case is exposing the most detailed public record yet of how OpenAI's nonprofit mission, commercial structure, and power politics collided under oath.",
-		SourceDoc: "https://docs.google.com/document/d/1h4FGSY_qMo8ISTh44AmaH5upQs4pzo67WUb-GBdLrh0/edit",
 		Sections: []Section{
 			{
 				Paragraphs: []string{

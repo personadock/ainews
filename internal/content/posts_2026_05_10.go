@@ -8,7 +8,6 @@ func init() {
 			Date:      "May 10, 2026",
 			Tag:       "Security",
 			Summary:   "Washington has restricted Anthropic's Claude Mythos on national security grounds even as parts of the US government use it, exposing a short-lived and deeply incoherent approach to frontier cyber capability control.",
-			SourceDoc: "https://docs.google.com/document/d/1jKfBWTiWsWULrMmnEGNhDV3mZ1ryyvegYm2SwrC5ijo/edit",
 			Sections: []Section{
 				{
 					Paragraphs: []string{
@@ -69,7 +68,6 @@ func init() {
 			Date:      "May 10, 2026",
 			Tag:       "Hardware",
 			Summary:   "Samsung's jump into the trillion-dollar club is part celebration and part warning: the HBM supply chain is becoming the limiting factor for AI deployment, with a projected memory price spike threatening H2 2026 capacity plans.",
-			SourceDoc: "https://docs.google.com/document/d/1kxLhHuQ1UvTyYIOxsgBW_JxPB7iauF5IMIVoaHVXuag/edit",
 			Sections: []Section{
 				{
 					Paragraphs: []string{
