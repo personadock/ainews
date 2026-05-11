@@ -24,6 +24,7 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"The Frontier Firm Is Here",
 		"The Government That Fears Its Own Weapon",
 		"Samsung&#39;s Trillion-Dollar Moment",
 		"The Lab Without Scientists",
@@ -48,7 +49,7 @@ func TestPostRoute(t *testing.T) {
 		t.Fatalf("New() error = %v", err)
 	}
 
-	req := httptest.NewRequest(http.MethodGet, "/posts/three-ais-three-laws-us-eu-china-ai-governance", nil)
+	req := httptest.NewRequest(http.MethodGet, "/posts/the-frontier-firm-is-here-microsoft-says-ai-has-moved-from-tool-to-operating-model", nil)
 	rec := httptest.NewRecorder()
 	server.ServeHTTP(rec, req)
 
@@ -56,7 +57,7 @@ func TestPostRoute(t *testing.T) {
 		t.Fatalf("status = %d, want %d", rec.Code, http.StatusOK)
 	}
 
-	if !strings.Contains(rec.Body.String(), "regulation is now part of system design") {
+	if !strings.Contains(rec.Body.String(), "Copilot Cowork") {
 		t.Fatalf("response did not render article body")
 	}
 }
@@ -80,12 +81,12 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 11 {
-		t.Fatalf("len(posts) = %d, want 11", len(posts))
+	if len(posts) != 12 {
+		t.Fatalf("len(posts) = %d, want 12", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got != "the-government-that-fears-its-own-weapon-how-mythos-became-americas-most-dangerous-ai-secret" {
-		t.Fatalf("first post slug = %q, want newest Mythos post", got)
+	if got := posts[0]["slug"]; got != "the-frontier-firm-is-here-microsoft-says-ai-has-moved-from-tool-to-operating-model" {
+		t.Fatalf("first post slug = %q, want newest frontier firm post", got)
 	}
 }
 
