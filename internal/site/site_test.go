@@ -24,6 +24,7 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"Google&#39;s Android Show 2026",
 		"The Frontier Firm Is Here",
 		"The Government That Fears Its Own Weapon",
 		"Samsung&#39;s Trillion-Dollar Moment",
@@ -81,12 +82,12 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 13 {
-		t.Fatalf("len(posts) = %d, want 13", len(posts))
+	if len(posts) != 15 {
+		t.Fatalf("len(posts) = %d, want 15", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got != "the-frontier-firm-is-here-microsoft-says-ai-has-moved-from-tool-to-operating-model" {
-		t.Fatalf("first post slug = %q, want newest frontier firm post", got)
+	if got := posts[0]["slug"]; got != "googles-android-show-2026-android-17-gemini-4-and-the-next-wave-of-mobile-ai" {
+		t.Fatalf("first post slug = %q, want newest Android Show 2026 post", got)
 	}
 }
 
