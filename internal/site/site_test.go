@@ -24,6 +24,8 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"Frontier AI as Cyber Weapons",
+		"May 2026 AI Model Rush",
 		"Google I/O 2026 Preview",
 		"Google&#39;s Android Show 2026",
 		"The Frontier Firm Is Here",
@@ -83,12 +85,12 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 16 {
-		t.Fatalf("len(posts) = %d, want 16", len(posts))
+	if len(posts) != 18 {
+		t.Fatalf("len(posts) = %d, want 18", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got != "google-io-2026-preview-agentic-ai-gemma-4-and-the-cosmo-ghost-layer" {
-		t.Fatalf("first post slug = %q, want newest Google I/O preview post", got)
+	if got := posts[0]["slug"]; got != "frontier-ai-as-cyber-weapons-gpt-5-5-tops-aisi-benchmarks-raising-urgent-safety-alarms" {
+		t.Fatalf("first post slug = %q, want newest frontier cyber weapons post", got)
 	}
 }
 

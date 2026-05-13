@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 16 {
-		t.Fatalf("Posts() returned %d posts, want 16", len(got))
+	if len(got) != 18 {
+		t.Fatalf("Posts() returned %d posts, want 18", len(got))
 	}
 
 	for _, post := range got {
@@ -25,6 +25,22 @@ func TestPostsReturnsPublishedPosts(t *testing.T) {
 }
 
 func TestFindBySlug(t *testing.T) {
+	cyberPost, ok := FindBySlug("frontier-ai-as-cyber-weapons-gpt-5-5-tops-aisi-benchmarks-raising-urgent-safety-alarms")
+	if !ok {
+		t.Fatal("FindBySlug() did not find frontier cyber weapons post")
+	}
+	if cyberPost.Title != "Frontier AI as Cyber Weapons: GPT-5.5 Tops AISI Benchmarks, Raising Urgent Safety Alarms" {
+		t.Fatalf("FindBySlug() returned %q for frontier cyber weapons post", cyberPost.Title)
+	}
+
+	modelRushPost, ok := FindBySlug("may-2026-ai-model-rush-12m-contexts-flash-speed-and-specialized-agents")
+	if !ok {
+		t.Fatal("FindBySlug() did not find May 2026 model rush post")
+	}
+	if modelRushPost.Title != "May 2026 AI Model Rush: 12M Contexts, Flash Speed, and Specialized Agents" {
+		t.Fatalf("FindBySlug() returned %q for May 2026 model rush post", modelRushPost.Title)
+	}
+
 	ioPost, ok := FindBySlug("google-io-2026-preview-agentic-ai-gemma-4-and-the-cosmo-ghost-layer")
 	if !ok {
 		t.Fatal("FindBySlug() did not find Google I/O preview post")
