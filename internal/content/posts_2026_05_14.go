@@ -3,6 +3,102 @@ package content
 func init() {
 	posts = append([]Post{
 		{
+			Title:   "Mythos National Security Standoff: The AI Model America Can't Agree On",
+			Slug:    "mythos-national-security-standoff-2026-05-14",
+			Date:    "May 14, 2026",
+			Tag:     "Security",
+			Summary: "Anthropic's Claude Mythos is simultaneously being used by the NSA, blocked by the White House, denied to CISA, and shadowed by Pentagon distrust, exposing how incoherent frontier AI governance becomes when a model starts looking like cyber weaponry.",
+			Sections: []Section{
+				{
+					Paragraphs: []string{
+						`There is something uniquely revealing about a government that cannot decide whether its most powerful new AI system is a national asset, a procurement risk, or a capability too dangerous to spread.`,
+						`That is the position Washington now finds itself in with Anthropic's Claude Mythos. The model is reportedly strong enough to autonomously discover and exploit serious software vulnerabilities, valuable enough that parts of the intelligence apparatus want it in active use, and alarming enough that the White House has stepped in to restrict who else gets access.`,
+						`The result is not a clean policy. It is a national security standoff inside the federal government itself, with each agency acting as though it is facing a different technology.`,
+					},
+				},
+				{
+					Heading: "The Expansion That Wasn't",
+					Paragraphs: []string{
+						`Anthropic had planned to expand Mythos access from roughly 50 organizations to about 120. Instead, the White House intervened and halted the broader rollout, citing familiar strategic concerns such as compute scarcity and supply-chain fragility, but also a newer one: the model appears unusually capable at offensive cyber work.`,
+						`That concern is not abstract. Mythos has been described as able to uncover a 27-year-old OpenBSD vulnerability and produce working exploit paths across major operating systems and browsers. British government testing reportedly found it substantially more capable at cyber offense than prior models they had examined.`,
+						`If those assessments hold, then the White House decision starts to look like an improvised form of capability control. It would mark one of the clearest cases yet of the US government treating a commercial frontier model less like software distribution and more like a sensitive strategic asset.`,
+					},
+				},
+				{
+					Heading: "A Government Split Four Ways",
+					Paragraphs: []string{
+						`The NSA is on one side of the divide. Reporting indicates it is already using Mythos for both defensive and offensive cyber work, which makes sense if your priority is operational advantage against sophisticated adversaries.`,
+						`The Pentagon represents a different instinct. After talks with Anthropic reportedly broke down over autonomous weapons and surveillance issues, the Department of Defense moved to blacklist the company from defense contracting, effectively treating the vendor as a supply-chain problem rather than a privileged national partner.`,
+						`CISA is stuck in the most uncomfortable position of all. The agency charged with defending civilian critical infrastructure does not appear to have comparable access, which means the government may be withholding one of its best vulnerability-hunting tools from the part of the state most directly responsible for protecting domestic networks. Meanwhile, Commerce and OMB are said to be shaping a hardened federal deployment path of their own.`,
+					},
+				},
+				{
+					Heading: "Why This Changes The Governance Frame",
+					Paragraphs: []string{
+						`The deeper story is not just bureaucratic inconsistency. It is that Mythos is forcing US officials to govern a frontier model as though it sits closer to export-controlled capability than to ordinary commercial release practice.`,
+						`That means pre-release visibility, access restrictions, classified testing, and interagency fights over who gets to hold the steering wheel. In effect, AI governance is being pulled toward the logic historically used for other dual-use technologies where the state cares less about consumer harm than about strategic imbalance.`,
+						`The problem is that this kind of control may buy only time. If capability continues compounding on the current curve and open-weight systems close the gap within the next year or so, then restricting one allowlist cannot serve as a durable security boundary. It merely delays broader diffusion.`,
+					},
+				},
+				{
+					Heading: "What The Standoff Really Reveals",
+					Paragraphs: []string{
+						`Washington's Mythos dispute is a preview of what happens when AI systems become too useful for national security agencies to ignore and too dangerous for policymakers to treat casually.`,
+						`The United States does not yet have a coherent doctrine for that world. It has fragments of one: selective access, voluntary testing, procurement pressure, and emergency-style executive intervention. Those fragments can slow a rollout, but they do not resolve the underlying question of who should control a model that different agencies simultaneously want to use, fear, and contain.`,
+						`That is why the Mythos story matters beyond Anthropic. It is an early stress test for how democratic states behave when a private AI model starts to look less like a product and more like a contested piece of national power.`,
+					},
+				},
+			},
+		},
+		{
+			Title:   "CAISI Framework: US Government's Quiet Pivot to Pre-Release AI Oversight",
+			Slug:    "caisi-pre-release-ai-oversight-2026-05-14",
+			Date:    "May 14, 2026",
+			Tag:     "Policy",
+			Summary: "Washington's emerging CAISI review system shows that once frontier AI starts looking like a national security capability, even administrations that reject broad regulation still move toward pre-release oversight.",
+			Sections: []Section{
+				{
+					Paragraphs: []string{
+						`The most important shift in US AI policy this month is not a loud piece of legislation. It is a quieter operational pivot: the federal government is moving toward reviewing major frontier models before they reach the public.`,
+						`That is a striking turn for an administration that had only recently cast earlier AI oversight efforts as burdensome and anti-competitive. Yet voluntary pre-release review agreements are now reportedly in place across the top American frontier labs, with CAISI at the center of the process.`,
+						`In practice, that means Washington is no longer satisfied with learning what the most capable private models can do after launch. It wants a look beforehand, especially when cyber and national security risks are involved.`,
+					},
+				},
+				{
+					Heading: "From Revocation To Review",
+					Paragraphs: []string{
+						`CAISI, the Center for AI Standards and Innovation, emerged out of the government's broader safety and standards apparatus but is now being used in a more strategic way. Instead of merely publishing guidance or encouraging best practices, it is becoming a channel through which labs provide early access for evaluation.`,
+						`Those evaluations reportedly cover dual-use capability, cyber offense potential, and other high-consequence failure modes, sometimes in classified environments. The TRAINS taskforce then helps route findings back into policy and deployment decisions.`,
+						`That is a meaningful escalation from the older posture of post hoc debate over model launches. Pre-release review turns evaluation into part of the release process itself, even if the arrangement is still described as voluntary.`,
+					},
+				},
+				{
+					Heading: "Why Mythos Forced The Issue",
+					Paragraphs: []string{
+						`The immediate catalyst appears to be the Mythos episode. Once Anthropic's model began to look like an unusually capable vulnerability-discovery and exploitation system, the old political framing around light-touch innovation policy became harder to sustain.`,
+						`A model that can materially alter cyber offense and defense calculations is not just another product announcement. It becomes a strategic variable, and states tend to demand earlier visibility into strategic variables.`,
+						`That is why the CAISI move matters. It suggests the real threshold for federal oversight is not general public concern about AI, but a narrower trigger point where frontier capability starts to resemble critical infrastructure, weapons relevance, or geopolitical leverage.`,
+					},
+				},
+				{
+					Heading: "Why Voluntary May Not Stay Voluntary",
+					Paragraphs: []string{
+						`For now, the review structure is built around memorandums of understanding rather than hard legal mandates. That gives both the White House and the labs flexibility: the government gets visibility without an immediate legislative battle, and companies cooperate without formally conceding to a licensing regime.`,
+						`But that balance looks temporary. If one major lab refuses cooperation while competitors comply, it creates a political flashpoint. If a reviewed model later causes a public scandal, the demand for stronger formal powers will rise just as quickly.`,
+						`In either case, the logic points in one direction. Once pre-release review becomes normal for top-tier labs, voluntary participation starts to function less like a free choice and more like the soft edge of an eventual mandate.`,
+					},
+				},
+				{
+					Heading: "The Boundary Between Safety And Control",
+					Paragraphs: []string{
+						`The larger question is not whether some review is justified. It is where the line sits between prudent state oversight and excessive government control over private innovation.`,
+						`That boundary gets blurry fast when the same models matter for economic competitiveness, national defense, and offensive cyber risk. A state that wants to reduce danger can easily also increase its leverage over release timing, technical access, and the companies building the systems.`,
+						`CAISI is important because it makes that tension concrete. The United States is beginning to build a frontier AI review architecture in real time, and the argument now is no longer whether oversight exists. It is what kind of oversight becomes normal once the strongest models are treated as matters of state consequence.`,
+					},
+				},
+			},
+		},
+		{
 			Title:   "The May 2026 Model Rush: GPT-5.5 Instant, SubQ's Long Context, and Grok 4.3",
 			Slug:    "the-may-2026-model-rush-gpt-5-5-instant-subqs-long-context-and-grok-4-3",
 			Date:    "May 14, 2026",

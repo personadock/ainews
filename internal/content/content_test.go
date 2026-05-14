@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 20 {
-		t.Fatalf("Posts() returned %d posts, want 20", len(got))
+	if len(got) != 22 {
+		t.Fatalf("Posts() returned %d posts, want 22", len(got))
 	}
 
 	for _, post := range got {
@@ -25,6 +25,22 @@ func TestPostsReturnsPublishedPosts(t *testing.T) {
 }
 
 func TestFindBySlug(t *testing.T) {
+	mythosStandoffPost, ok := FindBySlug("mythos-national-security-standoff-2026-05-14")
+	if !ok {
+		t.Fatal("FindBySlug() did not find Mythos national security standoff post")
+	}
+	if mythosStandoffPost.Title != "Mythos National Security Standoff: The AI Model America Can't Agree On" {
+		t.Fatalf("FindBySlug() returned %q for Mythos national security standoff post", mythosStandoffPost.Title)
+	}
+
+	caisiOversightPost, ok := FindBySlug("caisi-pre-release-ai-oversight-2026-05-14")
+	if !ok {
+		t.Fatal("FindBySlug() did not find CAISI pre-release oversight post")
+	}
+	if caisiOversightPost.Title != "CAISI Framework: US Government's Quiet Pivot to Pre-Release AI Oversight" {
+		t.Fatalf("FindBySlug() returned %q for CAISI pre-release oversight post", caisiOversightPost.Title)
+	}
+
 	modelRushLatest, ok := FindBySlug("the-may-2026-model-rush-gpt-5-5-instant-subqs-long-context-and-grok-4-3")
 	if !ok {
 		t.Fatal("FindBySlug() did not find latest May model rush post")
