@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 26 {
-		t.Fatalf("Posts() returned %d posts, want 26", len(got))
+	if len(got) != 28 {
+		t.Fatalf("Posts() returned %d posts, want 28", len(got))
 	}
 
 	for _, post := range got {
@@ -25,6 +25,22 @@ func TestPostsReturnsPublishedPosts(t *testing.T) {
 }
 
 func TestFindBySlug(t *testing.T) {
+	grokSprintPost, ok := FindBySlug("xai-grok-4-sprint-may-2026")
+	if !ok {
+		t.Fatal("FindBySlug() did not find xAI Grok 4 sprint post")
+	}
+	if grokSprintPost.Title != "xAI's Grok 4 Sprint: Three Releases in Six Weeks Chasing GPT-5.5" {
+		t.Fatalf("FindBySlug() returned %q for xAI Grok 4 sprint post", grokSprintPost.Title)
+	}
+
+	enterpriseAgentsPost, ok := FindBySlug("enterprise-ai-agent-failure-86-percent-governance-2026")
+	if !ok {
+		t.Fatal("FindBySlug() did not find enterprise AI agent failure post")
+	}
+	if enterpriseAgentsPost.Title != "The 86% Enterprise AI Agent Failure Rate: Governance Crisis Explained" {
+		t.Fatalf("FindBySlug() returned %q for enterprise AI agent failure post", enterpriseAgentsPost.Title)
+	}
+
 	reasoningPost, ok := FindBySlug("maturing-reasoning-models-adaptive-thinking-takes-center-stage")
 	if !ok {
 		t.Fatal("FindBySlug() did not find maturing reasoning models post")

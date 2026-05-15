@@ -24,6 +24,8 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"xAI&#39;s Grok 4 Sprint: Three Releases in Six Weeks Chasing GPT-5.5",
+		"The 86% Enterprise AI Agent Failure Rate: Governance Crisis Explained",
 		"Maturing Reasoning Models: Adaptive Thinking Takes Center Stage",
 		"Gemini 3.1 Ultra: Why Google&#39;s Native Multimodal Architecture Is The Real Story",
 		"From $30 to $0.40 Per Million Tokens",
@@ -93,12 +95,12 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 26 {
-		t.Fatalf("len(posts) = %d, want 26", len(posts))
+	if len(posts) != 28 {
+		t.Fatalf("len(posts) = %d, want 28", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got != "maturing-reasoning-models-adaptive-thinking-takes-center-stage" {
-		t.Fatalf("first post slug = %q, want newest maturing reasoning models post", got)
+	if got := posts[0]["slug"]; got != "xai-grok-4-sprint-may-2026" {
+		t.Fatalf("first post slug = %q, want newest xAI Grok 4 sprint post", got)
 	}
 }
 
