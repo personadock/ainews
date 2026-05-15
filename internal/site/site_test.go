@@ -24,6 +24,7 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"FDA&#39;s First AI Warning Letter: Why &#39;The AI Didn&#39;t Tell Us&#39; Is No Defense",
 		"Cloudflare&#39;s Global LLM Inference Infrastructure: Agents Week 2026 Deep Dive",
 		"xAI&#39;s Grok 4 Sprint: Three Releases in Six Weeks Chasing GPT-5.5",
 		"The 86% Enterprise AI Agent Failure Rate: Governance Crisis Explained",
@@ -96,12 +97,12 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 29 {
-		t.Fatalf("len(posts) = %d, want 29", len(posts))
+	if len(posts) != 30 {
+		t.Fatalf("len(posts) = %d, want 30", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got != "cloudflares-global-llm-inference-infrastructure-agents-week-2026-deep-dive" {
-		t.Fatalf("first post slug = %q, want newest Cloudflare inference infrastructure post", got)
+	if got := posts[0]["slug"]; got != "fda-first-ai-warning-letter-ai-compliance-2026" {
+		t.Fatalf("first post slug = %q, want newest FDA AI warning letter post", got)
 	}
 }
 

@@ -3,6 +3,54 @@ package content
 func init() {
 	posts = append([]Post{
 		{
+			Title:   "FDA's First AI Warning Letter: Why 'The AI Didn't Tell Us' Is No Defense",
+			Slug:    "fda-first-ai-warning-letter-ai-compliance-2026",
+			Date:    "May 15, 2026",
+			Tag:     "Policy",
+			Summary: "The FDA's first warning letter centered on AI overreliance in drug manufacturing makes a blunt regulatory point: companies can automate workflows, but they cannot automate accountability away.",
+			Sections: []Section{
+				{
+					Paragraphs: []string{
+						`Many of the biggest AI arguments still happen in the abstract. Companies debate model capabilities, policymakers debate frontier risks, and executives talk about productivity in broad, almost frictionless terms.`,
+						`The FDA's first warning letter explicitly tied to AI overreliance brings that conversation back to the most concrete level possible: if a regulated product is made badly, "the AI did not tell us" is not a legally meaningful excuse.`,
+						`That matters well beyond one cosmetics lab. It is an early regulatory signal that in high-stakes industries, AI will be treated as a tool inside an existing accountability chain, not as a new actor that absorbs responsibility on behalf of the humans who deployed it.`,
+					},
+				},
+				{
+					Heading: "What The FDA Says Happened",
+					Paragraphs: []string{
+						`According to the article brief, Purolea Cosmetics Lab allowed AI systems to generate drug specifications, standard operating procedures, and batch records while skipping the kind of human review that regulated manufacturing is built around.`,
+						`The operational failures were not subtle. The cited problems included missing process validation, inadequate testing, and unsanitary production conditions around over-the-counter shingles and herpes creams, serious enough that production stopped.`,
+						`That combination is what makes the case more than an isolated paperwork dispute. The concern is not that AI drafted documents. It is that AI-generated documentation appears to have been treated as a substitute for the quality discipline those documents are supposed to support.`,
+					},
+				},
+				{
+					Heading: "Why The Quality Unit Still Owns The Decision",
+					Paragraphs: []string{
+						`The sharpest compliance point in the brief is the citation to 21 CFR 211.22(c), which places core quality responsibilities on the quality control unit. In practice, that means a company cannot delegate final judgment to software and claim the workflow remained compliant.`,
+						`This is the crux of the warning letter's importance. AI can assist with drafting, classification, summarization, and even anomaly detection, but the legal duty to review, approve, and intervene still sits with accountable humans inside the regulated organization.`,
+						`That principle is likely to sound obvious to compliance teams, but it cuts directly against a growing operational temptation. As AI systems become more fluent, some organizations start treating polished output as verified output. Regulators are making clear those are not the same thing.`,
+					},
+				},
+				{
+					Heading: "A Broader Regulatory Pattern Is Emerging",
+					Paragraphs: []string{
+						`The brief also points to January 2026 good AI principles from the FDA and EMA, which fits a wider pattern across regulated sectors. Agencies are not banning AI outright. They are drawing a boundary around its use: accelerate work if you want, but preserve traceability, review, and accountable ownership.`,
+						`That is why this letter matters outside pharma. Financial services, healthcare delivery, insurance, and critical infrastructure teams are all building systems where AI may draft decisions, summarize evidence, or recommend next steps in environments that already have formal human obligations.`,
+						`The policy lesson is becoming consistent across those domains. Automation can compress process time, but it does not compress duty. If anything, the more automation a company adds, the more clearly it may need to document who checked what and why.`,
+					},
+				},
+				{
+					Heading: "What Enterprises Should Take From It",
+					Paragraphs: []string{
+						`For teams deploying AI in regulated workflows, the practical response is not to retreat from the technology. It is to build explicit AI-human operating models with review gates, approval authority, audit trails, and clear escalation paths when model output is incomplete or wrong.`,
+						`That is especially important because "AI said so" is unlikely to remain a defensible posture anywhere serious oversight exists. As European enforcement expands and sector regulators sharpen their own expectations, companies that cannot show human supervision will look exposed even if their tools are technically sophisticated.`,
+						`The deeper question raised by the FDA letter is simple and uncomfortable: when AI touches a critical workflow in your organization, who is still unmistakably responsible for the result? The firms that answer that clearly will be in a far better position than the ones that discover the answer during an enforcement action.`,
+					},
+				},
+			},
+		},
+		{
 			Title:   "Cloudflare's Global LLM Inference Infrastructure: Agents Week 2026 Deep Dive",
 			Slug:    "cloudflares-global-llm-inference-infrastructure-agents-week-2026-deep-dive",
 			Date:    "May 15, 2026",
