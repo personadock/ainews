@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 25 {
-		t.Fatalf("Posts() returned %d posts, want 25", len(got))
+	if len(got) != 26 {
+		t.Fatalf("Posts() returned %d posts, want 26", len(got))
 	}
 
 	for _, post := range got {
@@ -25,6 +25,14 @@ func TestPostsReturnsPublishedPosts(t *testing.T) {
 }
 
 func TestFindBySlug(t *testing.T) {
+	reasoningPost, ok := FindBySlug("maturing-reasoning-models-adaptive-thinking-takes-center-stage")
+	if !ok {
+		t.Fatal("FindBySlug() did not find maturing reasoning models post")
+	}
+	if reasoningPost.Title != "Maturing Reasoning Models: Adaptive Thinking Takes Center Stage" {
+		t.Fatalf("FindBySlug() returned %q for maturing reasoning models post", reasoningPost.Title)
+	}
+
 	geminiPost, ok := FindBySlug("gemini-3-1-ultra-native-multimodal-may-2026")
 	if !ok {
 		t.Fatal("FindBySlug() did not find Gemini 3.1 Ultra post")
