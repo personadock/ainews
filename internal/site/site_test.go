@@ -24,6 +24,8 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"OpenAI&#39;s Strategic Expansion: Acquiring Voice Tech and Launching Finance Tools",
+		"The Next Frontier: Orbital Data Centers and the Environmental Cost of AI",
 		"Towards Seamless Multimodal Agents: Conquering the Tool-Switching Tax",
 		"FDA&#39;s First AI Warning Letter: Why &#39;The AI Didn&#39;t Tell Us&#39; Is No Defense",
 		"Cloudflare&#39;s Global LLM Inference Infrastructure: Agents Week 2026 Deep Dive",
@@ -98,12 +100,12 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 31 {
-		t.Fatalf("len(posts) = %d, want 31", len(posts))
+	if len(posts) != 33 {
+		t.Fatalf("len(posts) = %d, want 33", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got != "seamless-multimodal-agents-tool-switching-tax-2026" {
-		t.Fatalf("first post slug = %q, want newest seamless multimodal agents post", got)
+	if got := posts[0]["slug"]; got != "openai-strategic-expansion-voice-tech-finance-tools-2026" {
+		t.Fatalf("first post slug = %q, want newest OpenAI post", got)
 	}
 }
 

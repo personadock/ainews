@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 31 {
-		t.Fatalf("Posts() returned %d posts, want 31", len(got))
+	if len(got) != 33 {
+		t.Fatalf("Posts() returned %d posts, want 33", len(got))
 	}
 
 	for _, post := range got {
@@ -215,6 +215,22 @@ func TestFindBySlug(t *testing.T) {
 	}
 	if platformPost.Title != "Apple's Multi-AI Gambit: What iOS 27 Reveals About the Platform Wars" {
 		t.Fatalf("FindBySlug() returned %q for Apple multi-AI post", platformPost.Title)
+	}
+
+	openaiPost, ok := FindBySlug("openai-strategic-expansion-voice-tech-finance-tools-2026")
+	if !ok {
+		t.Fatal("FindBySlug() did not find OpenAI strategic expansion post")
+	}
+	if openaiPost.Title != "OpenAI's Strategic Expansion: Acquiring Voice Tech and Launching Finance Tools" {
+		t.Fatalf("FindBySlug() returned %q for OpenAI strategic expansion post", openaiPost.Title)
+	}
+
+	orbitalPost, ok := FindBySlug("orbital-data-centers-environmental-cost-ai-2026")
+	if !ok {
+		t.Fatal("FindBySlug() did not find orbital data centers post")
+	}
+	if orbitalPost.Title != "The Next Frontier: Orbital Data Centers and the Environmental Cost of AI" {
+		t.Fatalf("FindBySlug() returned %q for orbital data centers post", orbitalPost.Title)
 	}
 
 	post, ok := FindBySlug("sprint-is-real-inside-xai-grok-4-race-to-the-top")
