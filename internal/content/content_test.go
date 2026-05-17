@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 33 {
-		t.Fatalf("Posts() returned %d posts, want 33", len(got))
+	if len(got) != 34 {
+		t.Fatalf("Posts() returned %d posts, want 34", len(got))
 	}
 
 	for _, post := range got {
@@ -215,6 +215,14 @@ func TestFindBySlug(t *testing.T) {
 	}
 	if platformPost.Title != "Apple's Multi-AI Gambit: What iOS 27 Reveals About the Platform Wars" {
 		t.Fatalf("FindBySlug() returned %q for Apple multi-AI post", platformPost.Title)
+	}
+
+	specializedAgentsPost, ok := FindBySlug("rise-of-specialized-ai-agents-in-enterprise-workflows-2026-trends")
+	if !ok {
+		t.Fatal("FindBySlug() did not find specialized AI agents post")
+	}
+	if specializedAgentsPost.Title != "The Rise of Specialized AI Agents in Enterprise Workflows: 2026 Trends" {
+		t.Fatalf("FindBySlug() returned %q for specialized AI agents post", specializedAgentsPost.Title)
 	}
 
 	openaiPost, ok := FindBySlug("openai-strategic-expansion-voice-tech-finance-tools-2026")
