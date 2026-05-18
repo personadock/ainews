@@ -4,8 +4,8 @@ import "testing"
 
 func TestPostsReturnsPublishedPosts(t *testing.T) {
 	got := Posts()
-	if len(got) != 35 {
-		t.Fatalf("Posts() returned %d posts, want 35", len(got))
+	if len(got) != 37 {
+		t.Fatalf("Posts() returned %d posts, want 37", len(got))
 	}
 
 	for _, post := range got {
@@ -288,6 +288,22 @@ func TestFindBySlug(t *testing.T) {
 	}
 	if openSourcePost.Title != "The New Open-Source King: How Qwen Quietly Dethroned Llama" {
 		t.Fatalf("FindBySlug() returned %q for open source post", openSourcePost.Title)
+	}
+
+	modelExplosionPost, ok := FindBySlug("may-2026s-ai-model-explosion-open-weight-models-reshape-the-landscape")
+	if !ok {
+		t.Fatal("FindBySlug() did not find open-weight model explosion post")
+	}
+	if modelExplosionPost.Title != "May 2026's AI Model Explosion: Open-Weight Models Reshape the Landscape" {
+		t.Fatalf("FindBySlug() returned %q for open-weight model explosion post", modelExplosionPost.Title)
+	}
+
+	scienceDiscoveryPost, ok := FindBySlug("ai-accelerates-scientific-discovery-breakthroughs-in-medicine-and-research-may-2026")
+	if !ok {
+		t.Fatal("FindBySlug() did not find scientific discovery post")
+	}
+	if scienceDiscoveryPost.Title != "AI Accelerates Scientific Discovery: Breakthroughs in Medicine and Research May 2026" {
+		t.Fatalf("FindBySlug() returned %q for scientific discovery post", scienceDiscoveryPost.Title)
 	}
 
 	if _, ok := FindBySlug("missing-post"); ok {
