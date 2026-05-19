@@ -24,6 +24,7 @@ func TestIndexIncludesPublishedStories(t *testing.T) {
 
 	body := rec.Body.String()
 	for _, want := range []string{
+		"Google I/O 2026: AI Takes Center Stage with Gemini, Agentic Tools, and Android XR Teasers",
 		"The Rise of Efficient AI Models: Balancing Performance and Sustainability in 2026",
 		"The Rise of Specialized AI Agents in Enterprise Workflows: 2026 Trends",
 		"OpenAI&#39;s Strategic Expansion: Acquiring Voice Tech and Launching Finance Tools",
@@ -103,11 +104,11 @@ func TestPostsAPI(t *testing.T) {
 		t.Fatalf("json.Unmarshal() error = %v", err)
 	}
 
-	if len(posts) != 38 {
-		t.Fatalf("len(posts) = %d, want 38", len(posts))
+	if len(posts) != 39 {
+		t.Fatalf("len(posts) = %d, want 39", len(posts))
 	}
 
-	if got := posts[0]["slug"]; got != "google-io-2026-ai-innovations-gemini-updates-and-android-xr-on-the-horizon" {
+	if got := posts[0]["slug"]; got != "google-io-2026-ai-takes-center-stage-gemini-agentic-tools-android-xr-teasers" {
 		t.Fatalf("first post slug = %q, want newest Google I/O post", got)
 	}
 }
